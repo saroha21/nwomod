@@ -1,0 +1,2 @@
+New World Order Mod for Victoria 2. NWO is a mod Vic2 (Heart of Darkness) that within the limitations of the games tries to model our present day and the near future.
+Two major forces guide the gaming period stretching from 1990 to 2090.
