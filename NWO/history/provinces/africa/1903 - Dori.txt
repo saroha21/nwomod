@@ -5,10 +5,3 @@ trade_goods = oil_seeds
 life_rating = 15
 terrain = dry_grassland
 colonial = 2
-1992.1.1 = {
-owner = BUF
-controller = BUF
-add_core = BUF
-life_rating = 15
-colonial = 0
-}

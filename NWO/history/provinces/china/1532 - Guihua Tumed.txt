@@ -22,11 +22,3 @@ state_building = {
 	building = coal_fuel_factory
 	upgrade = yes
 }
-1992.1.1 = {
-owner = CHI
-controller = CHI
-add_core = IMN
-life_rating = 35
-railroad = 1
-colonial = 2
-}

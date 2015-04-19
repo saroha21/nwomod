@@ -10,10 +10,3 @@ state_building = {
 	building = steel_factory
 	upgrade = yes
 }
-1992.1.1 = {
-owner = MAC
-controller = MAC
-add_core = MAC
-life_rating = 35
-colonial = 0
-}

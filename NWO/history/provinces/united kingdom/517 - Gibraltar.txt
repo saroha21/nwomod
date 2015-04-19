@@ -11,11 +11,3 @@ state_building = {
 	building = fish_canned_food_factory
 	upgrade = yes
 }
-1992.1.1 = {
-owner = ENG
-controller = ENG
-add_core = GIB
-life_rating = 35
-railroad = 3
-colonial = 0
-}

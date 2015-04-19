@@ -7,12 +7,3 @@ life_rating = 35
 terrain = conifer_forest
 railroad = 1
 colonial = 0
-1992.1.1 = {
-owner = FIN
-controller = FIN
-add_core = FIN
-add_core =  ALA
-life_rating = 35
-railroad = 3
-colonial = 0
-}

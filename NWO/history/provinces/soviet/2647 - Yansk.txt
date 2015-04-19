@@ -6,12 +6,3 @@ trade_goods = cattle
 life_rating = 15
 terrain = boreal_forest_hills
 colonial = 0
-1992.1.1 = {
-owner = LBW
-controller = LBW
-add_core = SAF
-add_core =  LBW
-life_rating = 15
-railroad = 1
-colonial = 0
-}
