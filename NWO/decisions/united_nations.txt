@@ -24,8 +24,6 @@ political_decisions = {
 			remove_country_modifier = not_member_of_united_nations
 			add_country_modifier = { name = united_nations duration = -1 }
 		}
-		
-		ai_will_do = { factor = 1 }
 	}
 	
 	united_nations_security_council = {
@@ -55,8 +53,6 @@ political_decisions = {
 		effect = {
 			add_crisis_interest = yes
 		}
-		
-		ai_will_do = { factor = 1 }
 	}
 	
 }

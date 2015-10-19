@@ -52,7 +52,7 @@ country_event = {
 		release = SUD
 		prestige = 5
 		random_country = { limit = { has_country_flag = claim_the_sudan } country_event = 1004904 }
-		diplomatic_influence = { who = SUD value = 200 }
+		diplomatic_influence = { who = SUD value = 100 }
 		ai_chance = { factor = 100 }
 	}
 	
@@ -100,7 +100,7 @@ country_event = {
     any_owned_province = { province_id = 360 }  
   }
 
-  mean_time_to_happen = { months = 11 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8014520_A
@@ -130,13 +130,14 @@ country_event = {
 	NOT = { exists = SSU }
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8014521_A
 	# EVT_8014521_A;This is a Islamic country!
 	any_pop = { limit = { NOT = { religion = sunni } } militancy = 2.0 }
 	release = SSU
+	3277 = { add_core = SSU } # Blue Nile
 	war = { target = SSU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	ai_chance = { factor = 100 }
   }
@@ -145,7 +146,6 @@ country_event = {
 	# EVT_8014521_B;Stick with the Addis Abebba agreement give South Sudan Autonomy
 	any_pop = { limit = { religion = sunni } militancy = 2.0 }
 	release_vassal = SSU
-	3277 = { add_core = SSU } # Blue Nile
 	ai_chance = { factor = 0 }
   }
 }
@@ -167,7 +167,7 @@ country_event = {
 	NOT = { exists = DAR }
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8014522_A
@@ -178,6 +178,7 @@ country_event = {
 	random_country = { 
 		limit = { tag = SUD NOT = { exists = SSU } owns = 1843 }
 		release = SSU
+		3277 = { add_core = SSU } # Blue Nile
 		war = { target = SSU attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } }
 	}
 	ai_chance = { factor = 100 }
@@ -190,7 +191,6 @@ country_event = {
 	random_country = { 
 		limit = { tag = SUD NOT = { exists = SSU } owns = 1843 }
 		release_vassal = SSU
-		3277 = { add_core = SSU } # Blue Nile
 	}
 	ai_chance = { factor = 0 }
   }
@@ -213,7 +213,7 @@ country_event = {
 	OR = { is_our_vassal = SSU NOT = { exists = SSU } }
   }
 
-  mean_time_to_happen = { months = 2 }
+  mean_time_to_happen = { months = 12 }
 
   option = {
     name = EVT_8014523_A

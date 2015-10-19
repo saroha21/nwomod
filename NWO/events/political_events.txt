@@ -3,6 +3,7 @@ country_event = {
 	title = "EVTNAME13201"
 	desc = "EVTDESC13201"
 	picture = "Outside_influences"
+
 	is_triggered_only = yes
 
 	option = {

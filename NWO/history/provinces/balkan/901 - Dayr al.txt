@@ -1,7 +1,6 @@
 owner = SYR
 controller = SYR
 add_core = SYR
-add_core = ROJ
 add_core = KUR
 trade_goods = petroleum
 life_rating = 35
@@ -11,7 +10,6 @@ colonial = 0
 owner = SYR
 controller = SYR
 add_core = SYR
-add_core = ROJ
 add_core = KUR
 life_rating = 35
 colonial = 0
