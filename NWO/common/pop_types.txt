@@ -558,7 +558,7 @@ colonialmigration_chance = {
 #general emigration chance
 emigration_chance = 
 {
-	factor = 0.06 
+	factor = 0.04 
 	modifier = {
 		factor = -2.0
 		state_scope = { is_colonial = yes }
@@ -771,7 +771,8 @@ emigration_chance =
 	}
 	modifier = {
 		factor = 200
-		is_primary_culture  = no
+		is_primary_culture = no
+		is_accepted_culture = no
 		country = { has_country_flag = ethnic_cleansing }
 	}
 	# ugly but need to limit pop fragmentation and sino indian swamping

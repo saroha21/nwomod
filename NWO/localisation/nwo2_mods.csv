@@ -6364,7 +6364,7 @@ EVT_8004201_DESC;In 1971, the Malta Labour Party led by Dom Mintoff won the Gene
 EVT_8004201_A;Form the Republic;;;;;;;;;;X
 EVT_8004201_B;Remain a monarchy;;;;;;;;;;X
 EVT_8014100_NAME;Trust Territory of Somaliland;;;;;;;;;;X
-EVT_8014100_DESC;In 1949, when the British military administration ended, Italian Somaliland became a United Nations trusteeship known as the Trust Territory of Somaliland. Under Italian administration, this trust territory lasted ten years, from 1950 to 1960, with legislative elections held in 1956 and 1959. During the 1950s, with UN funds pouring in and the presence of experienced Italian administrators who had come to see the region as their home, infrastructural and educational development blossomed in the region. School enrollment during this period was free.[;;;;;;;;;;X
+EVT_8014100_DESC;In 1949, when the British military administration ended, Italian Somaliland became a United Nations trusteeship known as the Trust Territory of Somaliland. Under Italian administration, this trust territory lasted ten years, from 1950 to 1960, with legislative elections held in 1956 and 1959. During the 1950s, with UN funds pouring in and the presence of experienced Italian administrators who had come to see the region as their home, infrastructural and educational development blossomed in the region. School enrollment during this period was free.;;;;;;;;;;X
 EVT_8014100_A;Transfer the Territory to Italy;;;;;;;;;;X
 EVT_8014101_A;Accept the Trust;;;;;;;;;;X
 EVT_8014102_NAME;Somalia Independence;;;;;;;;;;X
@@ -6946,3 +6946,5 @@ EVT_32509_NAME;Chechen Independence;;;;;;;;;;;;;x
 EVT_32509_DESC;In November 1990, Dzhokhar Dudayev was elected head of the Executive Committee of the unofficial opposition All-National Congress of the Chechen People, which advocated sovereignty for Chechnya as a separate republic within the Soviet Union. In October 1991, he won the presidential election. Dudayev, in his new position as president of Ichkeria, unilaterally declared the republic's sovereignty and its secession from the Soviet Union and Russia.	;;;;;;;;;;;;;x
 EVT_32509_A;Become independent;;;;;;;;;;;;;x
 EVT_32509_B;Leave matters as they are.;;;;;;;;;;;;;x
+communism_gets_weaker_title;Weakening Soviet Block;;;;;;;;;;;;;x
+communism_gets_weaker_desc;Several events will make the soviet block weaker. Eventually it may collapse due to internal weakness. Events that might weaken the Soviet union are:\n- Soviet fails to establish communist regimes in Greece and Italy in the aftermath of WW2.\n- Germany is divided.\n- Soviet/East Germany fails to gain control over Berlin in the Berlin Crisis\n- Yugoslavia, Czechoslovakia and Hungary manages to break out of Soviet sphere of vassals in the Stalin-Tiot split, Prague Spring / Hungarian Revolution\n- Soviet fails in asserting there position in the Cuban missile crisis.\n- South Korea remains free.\n- Soviet is unable to crush the Solidarity moment in Poland.\n;;;;;;;;;;;;;x
