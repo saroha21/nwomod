@@ -58,7 +58,7 @@ political_decisions = {
 			OR = {
 				ruling_party_ideology = communist
 				ruling_party_ideology = populist
-				ruling_party_ideology = islamist
+				ruling_party_ideology = traditionalist
 				has_country_modifier = in_bankrupcy
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xsa_ambition } } }
 			}
@@ -222,7 +222,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes }
 			political_polarization = 1
             war = no
 			capital_scope = { has_province_modifier = defence_union } 
@@ -275,7 +275,7 @@ political_decisions = {
 				government = hms_government
 			}
 			election = no
-			is_greater_power = yes 
+			OR = { is_greater_power = yes is_secondary_power = yes } 
 			political_polarization = 1
             war = no
 		}

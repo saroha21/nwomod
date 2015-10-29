@@ -39,6 +39,7 @@ country_event = {
   option = {
     name = EVT_8007520_A
 	government = nationalist_dictatorship country_event = 800050
+	ruling_party_ideology = socialist
   }
 }
 country_event = {
@@ -195,7 +196,7 @@ country_event = {
     exists = PER
     war = no
     any_owned_province = { province_id = 686 }  
-	PER = { government = islamist_dictatorship }
+	PER = { government = theocracy }
   }
 
   mean_time_to_happen = { months = 1  }

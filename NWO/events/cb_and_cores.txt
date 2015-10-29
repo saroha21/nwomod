@@ -63,10 +63,6 @@ country_event = {
 			war_policy = pro_military
 		}
 		modifier = {
-			factor = 1.1
-			war_policy = anti_military
-		}
-		modifier = {
 			factor = 1.2
 			war_policy = pacifism
 		}
@@ -161,7 +157,7 @@ country_event = {
 			OR = {
 				government = proletarian_dictatorship
 				government = populist_dictatorship
-				government = islamist_dictatorship
+				government = theocracy
 				government = nationalist_dictatorship
 			}
 		}
@@ -193,10 +189,6 @@ country_event = {
 		modifier = {
 			factor = 0.9
 			war_policy = pro_military
-		}
-		modifier = {
-			factor = 1.1
-			war_policy = anti_military
 		}
 		modifier = {
 			factor = 1.2
@@ -329,10 +321,6 @@ country_event = {
 			war_policy = pro_military
 		}
 		modifier = {
-			factor = 1.1
-			war_policy = anti_military
-		}
-		modifier = {
 			factor = 1.2
 			war_policy = pacifism
 		}
@@ -387,7 +375,7 @@ country_event = {
 			OR = {
 				government = proletarian_dictatorship
 				government = populist_dictatorship
-				government = islamist_dictatorship
+				government = theocracy
 				government = nationalist_dictatorship
 			}
 		}
@@ -422,10 +410,6 @@ country_event = {
 		modifier = {
 			factor = 0.9
 			war_policy = pro_military
-		}
-		modifier = {
-			factor = 1.1
-			war_policy = anti_military
 		}
 		modifier = {
 			factor = 1.2
@@ -469,7 +453,7 @@ country_event = {
 	trigger = {
 		OR = {
 			government = populist_dictatorship
-			government = islamist_dictatorship
+			government = theocracy
 			government = nationalist_dictatorship
 		}
 		average_consciousness = 4

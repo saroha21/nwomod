@@ -7,14 +7,18 @@ country_event = {
 
 	option = {
 		name = EVT_1014800_A
-		release = ISI
+		release_vassal = ISI
 		casus_belli = {
 			target = ISI
 			type = acquire_core_state
-			months = 12
+			months = 60
 		}
-		# TODO does V2 know which province is requested?
-		war = { target = ISI attacker_goal = { casus_belli = acquire_core_state } defender_goal = { casus_belli = conquest } }
+		ISI = { 
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+			}
+		}
 	}
 }
 
@@ -32,7 +36,7 @@ province_event = {
 		has_province_modifier = salafi_movement
 		is_capital = no
 		owner = { 
-			NOT = { government = islamist_dictatorship }  
+			NOT = { government = theocracy }  
 			OR = { NOT = { government = democracy government = hms_government } tag = NGE } 
 		}
 		OR = { 
@@ -55,7 +59,7 @@ province_event = {
 				value = moralism
 				factor = 0.03
 			}
-			ideology = { factor = 0.04 value = islamist }
+			ideology = { factor = 0.04 value = traditionalist }
 		}
 		add_core = ISI
 		remove_province_modifier = salafi_movement

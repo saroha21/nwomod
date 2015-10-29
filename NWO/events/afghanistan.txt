@@ -90,7 +90,7 @@ country_event = {
 
   option = {
     name = EVT_8000110_A
-	government = proletarian_dictatorship  country_event = 800052
+	government = proletarian_dictatorship  country_event = 800042
 	set_country_flag = soviet_intervention_in_afghanistan
 	country_event =  { id = 8176109 days = 30 }  
 	RUS  = { country_event = 8225000 } 
@@ -335,7 +335,7 @@ country_event = {
 		tag = AFG
 		has_country_flag = soviet_intervention_in_afghanistan
 		OR = { 
-			NOT = { ideology  = islamist }
+			NOT = { ideology  = traditionalist }
 			NOT = { has_country_modifier = sharia }
 		}
 		NOT = { year = 1996 }
@@ -367,7 +367,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		OR = { 
-			NOT = { ideology  = islamist }
+			NOT = { ideology  = traditionalist }
 			NOT = { has_country_modifier = sharia }
 		}
 		year = 1996
@@ -386,7 +386,7 @@ country_event = {
 			}
             militancy = -10
 		}
-		government = islamist_dictatorship  country_event = 800051
+		government = theocracy  country_event = 800051
 		add_country_modifier = { name = sharia duration = 1750 }
 		
 	}

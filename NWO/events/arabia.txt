@@ -168,15 +168,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			pop_militancy = 10
-			factor = 0.5
-		}
-		modifier = {
-			pop_militancy = 5
-			factor = 0.5
-		}
+		months = 2
 	}
 	
 	option = {
@@ -214,7 +206,7 @@ country_event = {
 				value = moralism
 				factor = 0.1
 			}
-			ideology = { factor = 0.1 value = islamist }
+			ideology = { factor = 0.1 value = traditionalist }
 		}
 		ai_chance = { factor = 0 }
 	}
@@ -226,7 +218,7 @@ country_event = {
 				value = moralism
 				factor = 0.1
 			}
-			scaled_militancy = { factor = 0.5 ideology = islamist } 
+			scaled_militancy = { factor = 0.5 ideology = traditionalist } 
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -243,7 +235,7 @@ province_event = {
 	trigger = {
 		year = 1972
 		pop_majority_religion = sunni 
-		owner = { NOT = { government = islamist_dictatorship }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		owner = { NOT = { government = theocracy }  OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt completes the ISI core
 		NOT = { has_province_modifier = salafi_supressed }
 		NOT = { has_province_modifier = salafi_movement }
@@ -263,7 +255,7 @@ province_event = {
 				value = moralism
 				factor = 0.03
 			}
-			ideology = { factor = 0.04 value = islamist }
+			ideology = { factor = 0.04 value = traditionalist }
 		}
 		add_province_modifier = { name = salafi_movement duration = -1 }
 		ai_chance = { factor = 0 }
@@ -277,7 +269,7 @@ province_event = {
 				value = moralism
 				factor = 0.03
 			}
-			scaled_militancy = { factor = 0.5 ideology = islamist } 
+			scaled_militancy = { factor = 0.5 ideology = traditionalist } 
 		}
 		add_province_modifier = { name = salafi_supressed duration = -1 }
 		ai_chance = { factor = 100 }
@@ -295,7 +287,7 @@ province_event = {
 	trigger = {
 		year = 1972
 		pop_majority_religion = sunni 
-		owner = { NOT = { government = islamist_dictatorship } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
+		owner = { NOT = { government = theocracy } OR = { NOT = { government = democracy government = hms_government } tag = NGE } }
 		NOT = { is_core = ISI } # 1014840 in isis.txt complets the ISI core
 		has_province_modifier = salafi_supressed
 	}
@@ -314,7 +306,7 @@ province_event = {
 				value = moralism
 				factor = 0.03
 			}
-			ideology = { factor = 0.04 value = islamist }
+			ideology = { factor = 0.04 value = traditionalist }
 		}
 		add_province_modifier = { name = salafi_movement duration = -1 }
 		remove_province_modifier = salafi_supressed

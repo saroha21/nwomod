@@ -363,7 +363,7 @@ acquire_core_state = {
 		any_owned_province = {
 			is_core = THIS
 		}
-		THIS = { NOT = { war_policy = pacifism } }
+		THIS = { OR = { NOT = { war_policy = pacifism } war = yes } }
 		NOT = { THIS = { ai = yes } part_of_sphere  = yes } # the ai shall not attack a sphered nation.
 	}
 	
@@ -950,6 +950,16 @@ humiliate = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		is_vassal = no
+		THIS = {
+			OR = { 
+				ai = no
+				AND = { 
+					NOT = { war_policy = pacifism }
+					NOT = {	has_country_flag = international_court_of_justice }
+					NOT = { OR = { government = democracy government = hms_government } }
+				}
+			}
+		}
  	}	
 	on_add = {
 		move_issue_percentage = { 
@@ -993,12 +1003,12 @@ territorial_dispute = {
 		THIS = {
 			NOT = { war_policy = pacifism }
 			NOT = {	has_country_flag = international_court_of_justice }
-			NOT = { OR = { government = democracy government = hms_government government = nationalist_dictatorship } }
+			NOT = { OR = { government = democracy government = hms_government } }
 		}
 		OR = { 
 			# Israel alone in the Arab world
 			AND = { tag = ISR exists = ISR THIS = { OR  = { primary_culture = sunni_arab primary_culture = shia_arab } } } 
-			AND = { tag = ISR exists = ISR THIS = { government = islamist_dictatorship OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } } 
+			AND = { tag = ISR exists = ISR THIS = { government = theocracy OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } } 
 			# Africa
 			AND = { tag = ERI exists = ERI THIS = { tag = ETH } } AND = { tag = ETH exists = ETH THIS = { tag = ERI } } # Badme
 			AND = { tag = CMR exists = CMR THIS = { tag = NGE } } AND = { tag = NGE exists = NGE THIS = { tag = CMR } } # Bakassi
@@ -1236,7 +1246,7 @@ install_authoritarian_regime = {
 				is_secondary_power = yes
 			}
 			NOT = { government = proletarian_dictatorship }
-			NOT = { government = islamist_dictatorship }
+			NOT = { government = theocracy }
 		}
 		is_vassal = no
 		civilized = yes
@@ -1284,7 +1294,7 @@ install_theocratic_regime = {
 
 	can_use = {
 		THIS = {
-			government = islamist_dictatorship
+			government = theocracy
 			NOT = { war_policy = pacifism }
 		}
 		is_vassal = no

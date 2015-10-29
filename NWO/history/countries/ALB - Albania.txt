@@ -1,6 +1,6 @@
 capital = 849
 primary_culture = albanian
-religion = irreligion
+religion = secularism
 government = proletarian_dictatorship
 plurality = 13.0
 nationalvalue = nv_order
@@ -14,7 +14,7 @@ upper_house = {
 	populist = 4
 	liberal = 21
 	conservative = 0
-	islamist = 0
+	traditionalist = 0
 	progressive = 0
 	socialist = 25
 	communist = 5
@@ -43,11 +43,6 @@ pollution = no_controls
 wage_and_work_hours = eight_work_hours
 social_service_reform = social_services
 # Technologies
-post_war_radar = 1
-infantry = 1
-heavy_tanks = 1
-first_generation_subsonic_jet_fighters = 1
-cold_war_doctrine = 1
 # Starting Consciousness
 consciousness = 1
 nonstate_consciousness = 1
@@ -56,7 +51,7 @@ oob = "/ALB_oob.txt"
 
 1992.1.1 = {
 	capital = 849
-	religion = irreligion
+	religion = secularism
 	government = democracy
 	plurality = 53.0
 	nationalvalue = nv_equality
@@ -69,7 +64,7 @@ oob = "/ALB_oob.txt"
 		populist = 4
 		liberal = 21
 		conservative = 0
-		islamist = 0
+		traditionalist = 0
 		progressive = 0
 		socialist = 25
 		communist = 5

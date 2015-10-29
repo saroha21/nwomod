@@ -126,14 +126,14 @@ country_event = { # Demand install communist in-power
 
 	option = {
 		name = EVT_19003_A
-		FROM = { add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 50 }
+		FROM = { casus_belli = { target = THIS type = install_communist_gov_cb months = 12  } diplomatic_influence = { who = THIS value = -100 } }
+		ai_chance = { factor = 0.1 modifier = { factor = 10 tag = FIN } }
 	}
 	
 	option = {
 		name = EVT_19003_B
 		government = proletarian_dictatorship country_event = 800052
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 1 modifier = { factor = 0 tag = FIN } }
 	}
 }
 country_event = { # Demand install democracy
@@ -145,14 +145,14 @@ country_event = { # Demand install democracy
 
 	option = {
 		name = EVT_19004_A
-		FROM = { add_casus_belli = { target = THIS type = install_democracy months = 12  } diplomatic_influence = { who = THIS value = -100 } }
-		ai_chance = { factor = 50 }
+		FROM = { casus_belli = { target = THIS type = install_democracy months = 12  } diplomatic_influence = { who = THIS value = -100 } }
+		ai_chance = { factor = 0 modifier = { factor = 0 tag = YUG }}
 	}
 	
 	option = {
 		name = EVT_19004_B
 		government = democracy country_event = 800054
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 1 modifier = { factor = 0 tag = YUG } }
 	}
 }
 country_event = {
@@ -612,7 +612,7 @@ country_event = {
 		name = "EVTOPTA19355"
 		great_wars_enabled = yes
 		set_global_flag = great_wars_enabled
-		set_global_flag = NWO_0_9_106 # TODO change with a new version
+		set_global_flag = NWO_0_9_900 # TODO change with a new version
 		any_country = { 
 			limit = { 
 				government = proletarian_dictatorship
@@ -914,7 +914,7 @@ country_event = {
                                                 government = nationalist_dictatorship
                                                 government = populist_dictatorship
                                                 government = proletarian_dictatorship
-                                                government = islamist_dictatorship
+                                                government = theocracy
                                         }
                                 }
                         }
@@ -983,15 +983,15 @@ country_event = {
                 }
                 random_owned = {
                         limit = {
-                                FROM = { government = islamist_dictatorship }
+                                FROM = { government = theocracy }
                                 owner = {
                                         civilized = yes
-                                        NOT = { government = islamist_dictatorship }
+                                        NOT = { government = theocracy }
                                 }
                         }
                         owner = {
-                                government = islamist_dictatorship
-                                ruling_party_ideology = islamist
+                                government = theocracy
+                                ruling_party_ideology = traditionalist
                                 political_reform = none_voting
                                 political_reform = ruling_party_opinion
                                 political_reform = state_religion
@@ -1397,7 +1397,8 @@ country_event = {
 
 	major = yes
 	
-	is_triggered_only = yes
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM attacked country
 
 	immediate = {
 		end_war = FROM
@@ -1415,13 +1416,14 @@ country_event = {
 	desc = "EVTDESC19381"
 	picture = "nuclear_peace"
 
-	is_triggered_only = yes
+	is_triggered_only = yes # nuclear super power
+	# FROM attacked country
 	
 	option = {
 		name = "EVTOPTA19381"
 		any_country = {
 			limit = { war_with = FROM }
-			FROM = { country_event = 19380 }
+			country_event = 19382
 		}
 	}
 
@@ -1429,6 +1431,61 @@ country_event = {
 		name = "EVTOPTB19381"
 	}
 	
+}
+
+country_event = {
+	id = 19382
+	title = "EVTNAME19382"
+	# EVTNAME19382;Nuclear Peace
+	desc = "EVTDESC19382"
+	# EVTDESC19382;$FROMCOUNTRY$ requests us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict.
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM nuclear super power
+	
+	option = {
+		name = "EVTOPTA19382"
+		# EVTOPTA19382;Ok, accept status quo peace, to avoid MAD
+		any_country = {
+			limit = { war_with = THIS has_country_modifier = nuclear_peace }
+			end_war = THIS
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19382"
+		# EVTOPTB19382;Buy time to negotiate peace - before nuclear_peace is enforced by $FROMCOUNTRY$
+		add_country_modifier = { name = stall_nuclear_peace duration = 30 }		
+		set_country_flag = stall_nuclear_peace
+	}
+	
+}
+
+country_event = {
+	id = 19383
+	title = "EVTNAME19383"
+	# EVTNAME19382;Nuclear Peace Enforced
+	desc = "EVTDESC19383"
+	# EVTDESC19383;$FROMCOUNTRY$ requested us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict. The matter will now be settled peacefully.
+	picture = "nuclear_peace"
+
+	trigger = {
+		has_country_flag = stall_nuclear_peace
+		NOT = { has_country_modifier = stall_nuclear_peace }
+	}
+	
+	immediate = { clr_country_flag = stall_nuclear_peace }
+	
+	option = {
+		name = "EVTOPTA19383"
+		# EVTOPTA19383;Ok, we have to accept peace to avoid MAD
+		any_country = {
+			limit = { has_country_modifier = nuclear_peace war_with = THIS }
+			country_event = 19380
+		}
+	}
+
 }
 
 #################################################################################
@@ -1484,7 +1541,7 @@ country_event = {
 		}
 		any_pop = {
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 2
 			}
 			scaled_militancy = {
@@ -1534,7 +1591,7 @@ country_event = {
 		clr_country_flag = socialist_election_win
 		clr_country_flag = liberal_election_win
 		clr_country_flag = communist_election_win
-		clr_country_flag = islamist_election_win
+		clr_country_flag = traditionalist_election_win
 		set_country_flag = populist_election_win
 		clr_country_flag = nationalist_election_win
 		clr_country_flag = progressive_election_win
@@ -1562,7 +1619,7 @@ country_event = {
 				factor = 1
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 2
 			}
 			scaled_militancy = {
@@ -1580,12 +1637,12 @@ country_event = {
 	option = {
 		name = EVT_96088_B
 		government = nationalist_dictatorship country_event = 800050
-		ruling_party_ideology = populist
+		ruling_party_ideology = socialist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
 		clr_country_flag = liberal_election_win
 		clr_country_flag = communist_election_win
-		clr_country_flag = islamist_election_win
+		clr_country_flag = traditionalist_election_win
 		set_country_flag = populist_election_win
 		clr_country_flag = progressive_election_win
 
@@ -1612,11 +1669,11 @@ country_event = {
 				factor = 1
 			}
 			dominant_issue = {
-				value = sectarianism_minority
+				value = limited_citizenship
 				factor = 0.3
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 2
 			}
 			scaled_militancy = {
@@ -1645,7 +1702,7 @@ country_event = {
 		clr_country_flag = socialist_election_win
 		clr_country_flag = liberal_election_win
 		clr_country_flag = communist_election_win
-		clr_country_flag = islamist_election_win
+		clr_country_flag = traditionalist_election_win
 		clr_country_flag = populist_election_win
 		clr_country_flag = progressive_election_win
 
@@ -1672,7 +1729,7 @@ country_event = {
 				factor = 1
 			}
 			scaled_militancy = {
-				ideology = islamist
+				ideology = traditionalist
 				factor = 2
 			}
 			scaled_militancy = {
@@ -1699,13 +1756,13 @@ country_event = {
 	
 	option = {
 		name = "EVT_96089_OPTA"
-		government = islamist_dictatorship country_event = 800051
-		ruling_party_ideology = islamist
+		government = theocracy country_event = 800051
+		ruling_party_ideology = traditionalist
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
 		clr_country_flag = liberal_election_win
 		clr_country_flag = communist_election_win
-		set_country_flag = islamist_election_win
+		set_country_flag = traditionalist_election_win
 		clr_country_flag = populist_election_win
 		clr_country_flag = nationalist_election_win
 		clr_country_flag = progressive_election_win
@@ -1729,7 +1786,7 @@ country_event = {
 		}
 		any_pop = {
 			dominant_issue = {
-				value = sectarianism_minority
+				value = limited_citizenship
 				factor = 0.3
 			}
 			scaled_militancy = {

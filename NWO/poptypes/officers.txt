@@ -401,7 +401,7 @@ ideologies = {
 		}
 	}
 	
-	islamist = {
+	traditionalist = {
 		factor = 2.1
 		modifier = { factor = 0 NOT = { location = { pop_majority_religion = sunni } location = { pop_majority_religion = shiite } } } # only muslim
 		modifier = {
@@ -1208,63 +1208,6 @@ issues =
 			}
 		}
 	}
-	anti_military = {
-		factor = 1
-		modifier = {
-			factor = 1.1
-			war = yes
-			war_exhaustion = 10
-		}
-		modifier = {
-			factor = 1.1
-			war = yes
-			war_exhaustion = 20
-		}
-		modifier = {
-			factor = 1.1
-			war = yes
-			war_exhaustion = 30
-		}
-		modifier = {
-			factor = 1.1
-			war = yes
-			war_exhaustion = 40
-		}
-		modifier = {
-			factor = 1.1
-			war = yes
-			war_exhaustion = 50
-		}
-		modifier = {
-			factor = 1.1
-			war = no
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				NOT = { military_score = THIS }
-			}
-		}
-		modifier = {
-			factor = 1.1
-			war = no
-			NOT = { is_greater_power = yes }
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				NOT = { military_score = THIS }
-			}
-		}
-		modifier = {
-			factor = 1.1
-			war = no
-			NOT = { civilized = yes }
-			any_neighbor_country = {
-				NOT = { civilized = yes }
-				NOT = { military_score = THIS }
-			}
-		}
-	}
 	pacifism = {
 		factor = 1
 		modifier = {
@@ -1367,7 +1310,7 @@ issues =
 			consciousness = 6
 			NOT = { is_state_religion = yes }
 			country = {
-				religious_policy = pluralism
+				religious_policy = pro_atheism
 			}
 		}
 		modifier = {
@@ -1386,31 +1329,6 @@ issues =
 			factor = 1.1
 			consciousness = 9
 		}
-	}
-	pluralism = {
-		factor = 1
-		modifier = {
-			factor = 1.1
-			consciousness = 2
-			NOT = { consciousness = 4 }
-			is_state_religion = yes
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 6
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 7
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 8
-		}
-		modifier = {
-			factor = 0.9
-			consciousness = 9
-		}	
 	}
 	moralism = {
 		factor = 1
@@ -1841,7 +1759,7 @@ issues =
 			factor = 0
 			OR = {
 				NOT = {
-					is_next_reform = irreligion_religion
+					is_next_reform = secularism_religion
 				}
 				NOT = { consciousness = 6 }
 				NOT = { life_needs = 1 }
@@ -1882,12 +1800,12 @@ issues =
 			NOT = { agree_with_ruling_party = 0.80 }
 		}
 	}
-	irreligion_religion = {
+	secularism_religion = {
 		factor = 1
 		modifier = {
 			factor = 0
 			OR = {
-				religious_rights = irreligion_religion
+				religious_rights = secularism_religion
 				NOT = { consciousness = 6 }
 				NOT = { life_needs = 1 }
 			}

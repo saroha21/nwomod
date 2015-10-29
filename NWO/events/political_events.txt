@@ -365,7 +365,7 @@ country_event = {
 		
 		modifier = {
 			factor = 0.8
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 		}
 		
 		modifier = {
@@ -721,7 +721,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			ruling_party_ideology = islamist
+			ruling_party_ideology = traditionalist
 		}
 	}
 	
@@ -1749,7 +1749,7 @@ country_event = {
 		name = "EVTOPTA4201"
 		any_pop = {
 			dominant_issue = {
-				value = irreligion_religion
+				value = secularism_religion
 				factor = 0.1
 			}
 		}
@@ -1771,7 +1771,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		religious_rights = irreligion_religion
+		religious_rights = secularism_religion
 		upper_house = {
 			ideology = liberal
 			value = 0.5
@@ -2610,7 +2610,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		war_policy = anti_military
+		war_policy = pacifism
 	}
 	
 	mean_time_to_happen = {
@@ -2629,7 +2629,7 @@ country_event = {
 		name = "EVTOPTA4408"
 		any_pop = {
 			dominant_issue = {
-				value = anti_military
+				value = pacifism
 				factor = 0.05
 			}
 		}
@@ -2651,10 +2651,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		war_policy = pacifism
-		OR = {
-			pacifism = 10
-			anti_military = 15
-		}
+		pacifism = 10
 	}
 	
 	mean_time_to_happen = {
@@ -2726,7 +2723,7 @@ country_event = {
 		name = "EVTOPTB4410"
 		any_pop = {
 			dominant_issue = {
-				value = pluralism
+				value = secularized
 				factor = 0.1
 			}
 		}
@@ -2815,7 +2812,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		religious_policy = pluralism
+		religious_policy = secularized
 		average_militancy = 6
 	}
 	
@@ -3080,7 +3077,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.2
-			pluralism = 10
+			secularized = 10
 		}
 	}
 	
@@ -3628,7 +3625,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		religious_policy = pluralism
+		religious_policy = secularized
 		publishing_rights = unregulated_publishing
 		average_consciousness = 6
 		literacy = 0.6

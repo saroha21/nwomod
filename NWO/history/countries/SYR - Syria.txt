@@ -1,6 +1,6 @@
 capital = 902
 primary_culture = shia_arab
-religion = irreligion
+religion = secularism
 government = democracy
 plurality = 4.0
 nationalvalue = nv_equality
@@ -14,7 +14,7 @@ upper_house = {
 	populist = 4
 	liberal = 21
 	conservative = 0
-	islamist = 0
+	traditionalist = 0
 	progressive = 0
 	socialist = 25
 	communist = 5
@@ -51,7 +51,7 @@ oob = "/SYR_oob.txt"
 
 1992.1.1 = {
 	capital = 902
-	religion = irreligion
+	religion = secularism
 	government = nationalist_dictatorship
 	plurality = 15.0
 	nationalvalue = nv_order
@@ -64,7 +64,7 @@ oob = "/SYR_oob.txt"
 		populist = 4
 		liberal = 21
 		conservative = 0
-		islamist = 0
+		traditionalist = 0
 		progressive = 0
 		socialist = 25
 		communist = 5
@@ -93,10 +93,5 @@ oob = "/SYR_oob.txt"
 	wage_and_work_hours = unregulated_hours
 	social_service_reform = no_social_service
 	# Technologies
-	post_war_radar = 1
-	infantry = 1
-	heavy_tanks = 1
-	first_generation_subsonic_jet_fighters = 1
-	cold_war_doctrine = 1
 oob = "1992/SYR_oob.txt"
 }

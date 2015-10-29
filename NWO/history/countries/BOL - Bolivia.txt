@@ -1,7 +1,7 @@
 capital = 2313
 primary_culture = white_spanish
 culture = mestizo
-religion = irreligion
+religion = secularism
 government = presidential_dictatorship
 plurality = 3.0
 nationalvalue = nv_order
@@ -15,7 +15,7 @@ upper_house = {
 	populist = 4
 	liberal = 21
 	conservative = 45
-	islamist = 0
+	traditionalist = 0
 	progressive = 0
 	socialist = 25
 	communist = 5
@@ -44,11 +44,6 @@ pollution = no_controls
 wage_and_work_hours = unregulated_hours
 social_service_reform = no_social_service
 # Technologies
-post_war_radar = 1
-infantry = 1
-heavy_tanks = 1
-first_generation_subsonic_jet_fighters = 1
-cold_war_doctrine = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
@@ -57,7 +52,7 @@ oob = "/BOL_oob.txt"
 
 1992.1.1 = {
 	capital = 2313
-	religion = irreligion
+	religion = secularism
 	government = democracy
 	plurality = 13.0
 	nationalvalue = nv_equality
@@ -70,7 +65,7 @@ oob = "/BOL_oob.txt"
 		populist = 4
 		liberal = 21
 		conservative = 45
-		islamist = 0
+		traditionalist = 0
 		progressive = 0
 		socialist = 25
 		communist = 5

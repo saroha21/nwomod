@@ -41,6 +41,7 @@ country_event = {
     name = EVT_8012622_A
 	relation = { who = ENG value = -50 } 
 	government = nationalist_dictatorship country_event = 800050
+	ruling_party_ideology = socialist
 	ai_chance = { factor = 100 }
   }
 
@@ -83,7 +84,7 @@ country_event = {
 
   trigger = {
     tag = SAF
-	government = nationalist_dictatorship
+	government = nationalist_dictatorship 
 	exists = ANG
 	exists = MOZ
 	exists = ZIM
@@ -95,6 +96,7 @@ country_event = {
     name = EVT_8012625_A
 	any_country = { limit = { NOT = { tag = THIS } } relation = { who = THIS value = -50 } } 
 	any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = 1.0 }
+	add_country_modifier = { name = apartheid duration = -1 } # 1990 start date must set
   }
 
 }

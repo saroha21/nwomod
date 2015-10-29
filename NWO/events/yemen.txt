@@ -58,6 +58,7 @@ country_event = {
 	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.15 } } }
 	government = nationalist_dictatorship country_event = 800050
+	ruling_party_ideology = socialist
   }
 }
 country_event = {
@@ -223,7 +224,7 @@ country_event = { # Independence of South Yemen
     name = EVT_8018211_A
 	diplomatic_influence = { who = FROM value = -200 } 
 	leave_alliance = FROM
-	add_casus_belli =  { target = FROM type = make_puppet months = 24 }
+	casus_belli =  { target = FROM type = make_puppet months = 24 }
   }
 }
 
