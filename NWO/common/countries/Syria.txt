@@ -29,7 +29,7 @@ party = {
 		ideology = socialist
 		religious_policy = pro_atheism
 		trade_policy = protectionism
-		war_policy = pacifism
+		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
@@ -45,13 +45,13 @@ party = {
 		end_date = 2092.1.1
 }
 party = {
-		name = "party_populist_0_shia_arab_SYR"
+		name = "party_populist_0_SYR"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = socialist
 		religious_policy = secularized
 		trade_policy = protectionism
-		war_policy = jingoism
+		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }
@@ -73,7 +73,7 @@ party = {
 		ideology = communist
 		religious_policy = pro_atheism
 		trade_policy = protectionism
-		war_policy = pacifism
+		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }

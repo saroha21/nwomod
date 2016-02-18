@@ -58,7 +58,7 @@ CHA;Chad;2608;black_french,sara;Massenya;1.75%;secularism;democracy;0.23%;-3;2,5
 CHC;Chechnya;;chechen;Grozny;14.75%;secularism;proletarian_dictatorship;3.50%;-0,671825;5,3;73,8;0-100-0,communist255-0-0
 CHL;Chile;6091;white_spanish;Santiago;6.75%;secularism;democracy;9.38%;-1,259444;3,6;89,2;147-112-219
 CHS;Chin State;;chin;Sittwe;0.75%;secularism;presidential_dictatorship;1.68%;-2,5;8,4;33;
-CHI;China;562580;chinese;Yenan;20.50%;secularism;proletarian_dictatorship;1%;-1,23555;1,7;13,7;255-165-0
+CHI;China;562580;chinese;Yenan;20.50%;secularism;proletarian_dictatorship;1%;-1,33555;1,7;13,7;255-165-0
 CHU;Chuvashia;;chuvash,russian;Simbirsk;14.75%;secularism;proletarian_dictatorship;16.03%;-0,671825;5,3;73,8;131-139-131, communist255-0-0
 CIR;Circassia;;circassians,russian;Adygei;14.75%;secularism;democracy;16.03%;-0,671825;5,3;73,8;
 CIS;Ciskei;;xhosa;Bisho;5.00%;secularism;populist_dictatorship;1.15%;-1,061362;1,3;62;
@@ -216,7 +216,7 @@ OMA;Oman;489;ibad_arab;Muscat;0.50%;secularism;absolute_monarchy;2.13%;-1,708679
 TUR;Ottoman Empire;21122;turkish;Ankara;3.25%;secularism;presidential_dictatorship;3.83%;-1,287659;8,7;71,5;
 PAK;Pakistan;40382;indian_muslim;Karachi;1.00%;sunni;democracy;2.50%;-2,295822;3,7;36,2;0-100-0
 PAU;Palau;7;micronesian;Palau;3.75%;secularism;democracy;5.50%;-2,5;0;84,2;
-PAL;Palestine;771;sunni_arab;Jerusalem;1.25%;secularism;democracy;1.40%;-2,5;0;74,3;
+PAL;Palestine;1845;sunni_arab;Jerusalem;1.25%;secularism;democracy;1.40%;-2,5;0;74,3;
 PNM;Panama;893;mestizo;Panama City;2.75%;secularism;democracy;8.73%;-1,742967;0;75,3;
 PAP;Papal States;;italian;Rome;0.50%;secularism;absolute_monarchy;12.25%;-1,5;130,6;100;
 PPN;Papua New Guinea;1412;papua;Port Moresby;1.50%;secularism;hms_government;0.58%;-2,86825;0,5;12,5;153-50-204
@@ -224,7 +224,7 @@ PRG;Paraguay;1476;white_spanish,mestizo;Asuncion;2.50%;secularism;democracy;2.53
 PER;Persia;16357;persian;Tehran;2.00%;shiite;absolute_monarchy;3.75%;-2,099349;7,9;69,1;189-183-107
 PEU;Peru;7633;white_spanish,mestizo;Lima;3.75%;secularism;presidential_dictatorship;7.20%;-1,737957;3,9;77,3;244-164-96
 PHI;Philippines;21131;filipino;Manila;1.50%;secularism;democracy;7.80%;-1,676072;1,3;48,8;25-25-112
-POL;Poland;24824;polish;Warsaw;6.00%;secularism;proletarian_dictatorship;13.88%;-0,46815;3,1;60,9;255-69-0
+POL;Poland;24824;polish;Warsaw;6.00%;secularism;proletarian_dictatorship;5.88%;-0,46815;3,1;60,9;255-69-0
 POY;Polynesia;;white_french,micronesian;Tahiti;18.50%;secularism;democracy;7.25%;0,1592;3,4;85,8;
 POR;Portugal;8443;portuguese,white_portuguese;Lisbon;8.25%;secularism;populist_dictatorship;12.55%;-0,72302;4;61,1;34-139-34
 PUR;Puerto Rico;2218;white_spanish;Puerto Rico;9.00%;secularism;democracy;7.00%;0,44247;4,4;92,5;106-90-205
